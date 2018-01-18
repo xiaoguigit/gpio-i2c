@@ -1,0 +1,23 @@
+A driver use gpio to simulate i2c
+EX.
+        am335x_gpio_i2c0: am335x_gpio_i2c0 {
+            compatible = "am335x-gpio-i2c";
+            gpios = <&gpio1 19 0 // sda
+                    &gpio1 18 0 // scl
+                >;
+            #address-cells = <1>;
+            #size-cells = <0>;
+            dev-name,id-num = <0>;
+            i2c-gpio,delay-us = <5>;
+        };
+
+        am335x_gpio_i2c1: am335x_gpio_i2c1 {
+            compatible = "am335x-gpio-i2c";
+            gpios = <&gpio1 21 0 // sda
+                    &gpio1 20 0 // scl
+                >;
+            #address-cells = <1>;
+            #size-cells = <0>;
+            dev-name,id-num = <1>;
+            i2c-gpio,delay-us = <5>;
+        };
